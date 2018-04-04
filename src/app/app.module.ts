@@ -1,16 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { Routes, RouterModule } from '@angular/router';
+import { PantryComponent } from './pantry/pantry.component';
+import { HomeComponent } from './home/home.component';
+import { PantryModule } from './pantry/pantry.module';
 
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'pantry', component: PantryComponent }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    PantryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
