@@ -10,6 +10,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { PantryComponent } from './pantry/pantry.component';
 import { HomeComponent } from './home/home.component';
 import { PantryModule } from './pantry/pantry.module';
+import {FoodService} from './services/food.service';
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,9 +30,12 @@ const appRoutes: Routes = [
     PantryModule,
     NoopAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    FoodService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
