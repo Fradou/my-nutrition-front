@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { PantryModule } from './pantry/pantry.module';
 import {FoodService} from './services/food.service';
 import {HttpClientModule} from '@angular/common/http';
+import {UserService} from './services/user.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -34,7 +35,8 @@ const appRoutes: Routes = [
     HttpClientModule
   ],
   providers: [
-    FoodService
+    FoodService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
