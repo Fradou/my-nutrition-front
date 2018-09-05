@@ -13,6 +13,7 @@ import { PantryModule } from './pantry/pantry.module';
 import {FoodService} from './services/food.service';
 import {HttpClientModule} from '@angular/common/http';
 import {UserService} from './services/user.service';
+import { UserComponent } from './user/user.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
